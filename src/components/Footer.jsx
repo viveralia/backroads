@@ -2,22 +2,23 @@ import React from 'react'
 import styles from '../css/footer.module.css'
 import links from '../constants/links'
 import socialIcons from '../constants/social-icons'
-import { Link } from 'gatsby'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 
 const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.links}>
                 {links.map((link, index) => (
-                    <Link key={index} to={link.path}>
+                    <AniLink paintDrip key={index} to={link.path}>
                         {link.text}
-                    </Link>
+                    </AniLink>
                 ))}
             </div>
             <div className={styles.icons}>
                 {socialIcons.map((item, index) => (
                     <a
                         href={item.url}
+                        key={index}
                         target="_blank"
                         rel="noopener noreferrer"
                     >
