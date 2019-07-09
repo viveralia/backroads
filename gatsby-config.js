@@ -7,6 +7,11 @@ module.exports = {
         description:
             'Explore awesome worldwide tours and discover what makes each of them unique. Forget your daily routine & say yes to adventure.',
         author: '@johndoe',
+        twitterUsername: '@johndoe',
+        // Inside the static folder
+        image: '/defaultBcg.jpeg',
+        // Without the ending slash (/)
+        siteUrl: 'https://udemy-gatsby-github.netlify.com',
     },
     plugins: [
         {
@@ -23,10 +28,12 @@ module.exports = {
                 path: `${__dirname}/src/images/`,
             },
         },
+        `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-sass`,
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-transition-link`,
+        `gatsby-plugin-playground`,
     ],
 }
