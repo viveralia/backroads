@@ -7,6 +7,7 @@ import Img from 'gatsby-image'
 import { FaMoneyBillWave, FaMap } from 'react-icons/fa'
 import Day from '../components/SingleTour/Day'
 import AniLink from 'gatsby-plugin-transition-link/AniLink'
+import SEO from '../components/SEO'
 
 const tourTemplate = ({ data }) => {
     // Destructuring all the info needed from data
@@ -26,6 +27,7 @@ const tourTemplate = ({ data }) => {
 
     return (
         <Layout>
+            <SEO title={name} />
             <StyledHero img={mainImage.fluid} />
             <section className={styles.template}>
                 <div className={styles.center}>

@@ -35,5 +35,14 @@ module.exports = {
         `gatsby-plugin-styled-components`,
         `gatsby-plugin-transition-link`,
         `gatsby-plugin-playground`,
+        `gatsby-plugin-sitemap`,
+        {
+            resolve: 'gatsby-plugin-robots-txt',
+            options: {
+                host: 'https://udemy-gatsby-github.netlify.com/',
+                sitemap: 'https://udemy-gatsby-github.netlify.com/sitemap.xml',
+                policy: [{ userAgent: '*', allow: '/' }],
+            },
+        },
     ],
 }

@@ -70,3 +70,4 @@ yarn-error.log
 
 # Secret Keys
 .env.development
+.env.production
